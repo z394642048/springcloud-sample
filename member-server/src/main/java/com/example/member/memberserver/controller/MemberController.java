@@ -13,6 +13,11 @@ public class MemberController {
 
     @RequestMapping( "getInfo" )
     public List<String> getInfo() {
+        try {
+            Thread.sleep( 3000 );
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         List<String> list = new ArrayList<>();
         list.add( "333333333" );
         list.add( "dfgdfgdfg" );
