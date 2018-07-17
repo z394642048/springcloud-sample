@@ -1,0 +1,9 @@
+注册中心地址，查看哪些服务已经注册上
+eureka:http://localhost:8888/
+配置了两个会员服务，以验证feign的负载均衡是否有效
+member-server1:http://localhost:8677/getInfo
+member-server2:http://localhost:8678/getInfo
+通过订单服务去调用会员服务中的方法（有延时）
+feign-order-server:http://localhost:8765/getList
+通过zuul方式去调用订单服务中的方法
+http://localhost:8777/api-order/getList
