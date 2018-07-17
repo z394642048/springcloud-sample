@@ -15,7 +15,14 @@ public class OrderController {
 
     @RequestMapping("getList")
     public List getList() {
+        System.out.println("断流操作------------------");
         return orderService.getList();
+    }
+
+
+    @RequestMapping("/getOrderInfo")
+    public String getOrderInfo(){
+        return "getOrderInfo";
     }
 
 }
