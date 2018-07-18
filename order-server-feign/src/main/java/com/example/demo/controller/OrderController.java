@@ -15,14 +15,14 @@ public class OrderController {
 
     @RequestMapping("getList")
     public List getList() {
-        System.out.println("断流操作------------------");
+        System.out.println("测试熔断");
         return orderService.getList();
     }
 
 
     @RequestMapping("/getOrderInfo")
     public String getOrderInfo(){
-        return "getOrderInfo";
+        return "测试降级";
     }
 
 }
